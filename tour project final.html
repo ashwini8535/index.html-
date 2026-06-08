@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+    background-color:#03c6f7de;
+    font-family:Arial, sans-serif;
+}
+
+h1{
+    background-color:#0077b6;
+    color:BLACK(87, 221, 9, 0.623);
+    padding:15px;
+}
+
+h2{
+    color:#67d6b1da;
+}
+
+div{
+    background-color:rgba(171, 122, 194, 0.26);
+    width:70%;
+    margin:auto;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0px 0px 10px rgb(145, 69, 126);
+}
+
+img{
+    border-radius:10px;
+    border:3px solid #d18f00;
+}
+
+button{
+    background-color:#009723;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    font-size:16px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background-color:#218838;
+}
+
+input[type="date"],
+input[type="number"]{
+    padding:5px;
+    border:1px solid #04d8c6;
+    border-radius:5px;
+}
+
+hr{
+    border:2px solid #018ba3;
+    width:80%;
+}
+
+a{
+    text-decoration:none;
+    color:rgb(187, 10, 223);
+    background-color:#cd62ee;
+    padding:10px 15px;
+    border-radius:5px;
+}
+
+a:hover{
+    background-color:#2cdbd38a;
+}
+</style>
+
+    <title>Tour Packages</title>
+
+    <script>
+        function updatePrice(packageName, price) {
+            let members = document.getElementById(packageName + "Members").value;
+            let total = members * price;
+
+            document.getElementById(packageName + "Total").innerHTML =
+                "Total Price: ₹" + total.toLocaleString();
+        }
+    </script>
+</head>
+
+<body bgcolor="#eeeeee">
+
+<h1 align="center">Tour Packages</h1>
+
+<!-- GOA -->
+<div align="center">
+    <h2>Goa Tour Package</h2>
+    <img src="c:\Users\acer\goa image.jpg" width="400" height="250"><br><br>
+
+    <p>Enjoy the beautiful beaches, nightlife, and water sports in Goa.</p>
+
+    Travel Date:
+    <input type="date"><br><br> 
+
+    Members:
+    <input type="number" id="goaMembers" value="1" min="1"
+           oninput="updatePrice('goa',10000)"><br><br>
+
+    <p><b>Price per Person: ₹10,000</b></p>
+
+    <h3 id="goaTotal">Total Price: ₹10,000</h3>
+
+    <button onclick="alert('Goa Tour Booked!')">Book Now</button>
+</div>
+
+<hr>
+
+<!-- KASHMIR -->
+<div align="center">
+    <h2>Kashmir Tour Package</h2>
+    <img src="c:\Users\acer\kasmir image.jpg" width="400" height="250"><br><br>
+
+    <p>Experience snow mountains, lakes, and valleys in Kashmir.</p>
+
+    Travel Date:
+    <input type="date"><br><br>
+
+    Members:
+    <input type="number" id="kashmirMembers" value="1" min="1"
+           oninput="updatePrice('kashmir',18000)"><br><br>
+
+    <p><b>Price per Person: ₹18,000</b></p>
+
+    <h3 id="kashmirTotal">Total Price: ₹18,000</h3>
+
+    <button onclick="alert('Kashmir Tour Booked!')">Book Now</button>
+</div>
+
+<hr>
+
+<!-- KERALA -->
+<div align="center">
+    <h2>Kerala Tour Package</h2>
+    <img src="c:\Users\acer\kerala.jpg" width="400" height="250"><br><br>
+
+    <p>Explore backwaters, greenery, and houseboats in Kerala.</p>
+
+    Travel Date:
+    <input type="date"><br><br>
+
+    Members:
+    <input type="number" id="keralaMembers" value="1" min="1"
+           oninput="updatePrice('kerala',15000)"><br><br>
+
+    <p><b>Price per Person: ₹15,000</b></p>
+
+    <h3 id="keralaTotal">Total Price: ₹15,000</h3>
+
+    <button onclick="alert('Kerala Tour Booked!')">Book Now</button>
+</div>
+
+<hr>
+
+<!-- MANALI -->
+<div align="center">
+    <h2>Manali Tour Package</h2>
+    <img src="c:\Users\acer\manali image.jpg" width="400" height="250"><br><br>
+
+    <p>Enjoy mountains, snow, and adventure sports in Manali.</p>
+
+    Travel Date:
+    <input type="date"><br><br>
+
+    Members:
+    <input type="number" id="manaliMembers" value="1" min="1"
+           oninput="updatePrice('manali',12000)"><br><br>
+
+    <p><b>Price per Person: ₹12,000</b></p>
+
+    <h3 id="manaliTotal">Total Price: ₹12,000</h3>
+
+    <button onclick="alert('Manali Tour Booked!')">Book Now</button>
+</div>
+
+<br><br>
+
+</body>
+</html>
